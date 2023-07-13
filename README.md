@@ -20,3 +20,5 @@
 ⓐ .gitignore 파일 생성
 ⓑ gitignore에 추적원치않는 파일 작성
 ⓒ git init, git status
+
+- 팀플 도중 git 병합 충돌 : 서로 수정한 것들을 push 먼저해서 발생. 따라서 pull을 먼저 사용하고 push를 사용 해야한다!
