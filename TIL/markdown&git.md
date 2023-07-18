@@ -65,3 +65,7 @@ print("ninano")
 ⓒ git init, git status
 
 - 팀플 도중 git 병합 충돌 : 서로 수정한 것들을 push 먼저해서 발생. 따라서 pull을 먼저 사용하고 push를 사용 해야한다!
+
+그럼에도, 서로 관련 기록이 없는 이질적인 두 프로젝트를 병합해줄 때
+- git pull origin master --allow unrelated histories
+
