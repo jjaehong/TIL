@@ -37,6 +37,7 @@ print("ninano")
 - Working Directory : 실제 작업 중인 파일들이 위치하는 영역
 - Staging Area : working directory에서 변경된 파일 중, 다음 버전에 포함시킬 파일들을 선택적으로 추가하거나 제외할 수 있는 중간 준비 영역
 - Repository : **버전(commit)** 이력과 파일들이 영구적으로 저장되는 영역, 모든 **버전(commit)**과 변경 이력이 기록됨.
+
 - Commit : 버전, 변경된 파일들을 저장하는 행위, 마치 사진을 찍듯이 기록한다함.
 ![이미지](이미지/git.png)
 
