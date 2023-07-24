@@ -1,9 +1,10 @@
-numbers = [1,2,3]
-numbers2 = [4,5,6]
+# main.py
 
+# 아래 함수를 수정하시오.
+def find_min_max(lst):
+    minimum = min(lst)
+    maximum = max(lst)
+    return minimum, maximum
 
-# numbers.append(numbers2)
-# print(numbers) # [1, 2, 3, [4,5,6]]
-
-print(numbers.extend(numbers2))
-print(numbers) #[1,2,3,4,5,6]
+result = find_min_max([3, 1, 7, 2, 5])
+print(tuple(result)) # (1, 7)
