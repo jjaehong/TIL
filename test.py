@@ -1,9 +1,9 @@
-numbers = [1,2,3]
-numbers2 = [4,5,6]
+a = [1, 2, [1, 2]]
+b = a[:]
+print(a, b)  # [1, 2, [1, 2]] [1, 2, [1, 2]]
 
 
-# numbers.append(numbers2)
-# print(numbers) # [1, 2, 3, [4,5,6]]
-
-print(numbers.extend(numbers2))
-print(numbers) #[1,2,3,4,5,6]
+b[2][0] = 100
+b[0] = 20
+a[1] = 50
+print(a, b)  # [1, 2, [100, 2]] [1, 2, [100, 2]]
