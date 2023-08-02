@@ -1,22 +1,48 @@
-# flatten
+# sum
 
-dump = 70
-box_height = [1m2m3m4m]
 
-max_height = 1
-min_height = 100
+import sys
+sys.stdin = open("input.txt", "r")
 
-for height in box_heights(): # 박스 높이
+for tc in range(1, 11):
+    tc = int(input())
+    matrix = [list(map(int, input().split())) for _ in range(100)]
 
-            if max_height < height:
-                max_height = height
+    max_row = 0
+    max_col = 0
+    dia1_tot = 0
+    dia2_tot = 0
+
+    for r in range(100):
+        row_tot = 0
+        col_tot = 0
+        dia1_tot += matrix[r][r]
+        dia2_tot += matrix[r][99-r]
+
+
+        for c in range(100):
+            row_tot += matrix[r][c]
+            if max_row < row_tot:
+                max_row = row_tot
+
+            col_tot += matrix[c][r]
+            if max_col < col_tot:
+                max_col = col_tot
+    
+
+
+    result = [max_row, max_col, dia1_tot, dia2_tot]
+    for i in result:
+        if result[i]
+
+    print(f'#{tc} {result[3]}')
+
+
         
-            if min_height > height:
-                min_height = height
-            else:
-                continue
 
-            while dump == 0 or max_height == min_height :
-                max_height -= 1
-                min_height += 1
-                dump -= 1
+
+
+
+
+
+
