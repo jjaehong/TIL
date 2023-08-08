@@ -26,8 +26,8 @@ for tc in range(1,11):
             r_cnt = 0
             c_cnt = 0
             for v in range(t_len//2):
-                if word_row[v] == word_row[t_len-1-v]:
-                    r_cnt += 1
+                if word_row[v] == word_row[t_len-1-v]: # 주의 : 여기서 바로 결과값을 카운트하면 첫시도에서 맞으면 바로 카운트됨
+                    r_cnt += 1  # 따라서 중간저장소를 만들어서 카운트 해준 뒤 최종 판단이 된 값을 결과값에 다시 넣어줘야한다.
 
                 if word_col[v] == word_col[t_len-1-v]:
                     c_cnt += 1
