@@ -1,29 +1,58 @@
-import sys
-sys.stdin = open("input.txt", "r")
+icp = {"+": 1, "-": 1, "/": 2, "*": 2, "(": 3}
+isp = {"+": 1, "-": 1, "/": 2, "*": 2, "(": 0}
 
 
-T = int(input())
-for tc in range(1,T+1):
-    N = int(input())
-    arr = [list(map(int, input().split())) for _ in range(N)]
+def get_postfix(infix,n):
+    postfix = ''
+    stack = []
 
-    matrix = [[0]*10 for _ in range(10)]
+    for i in range(n):
+        
+        if infix[i] not in '+':
+            postfix += infix[i]
+        
+        else:
+            # 닫는괄호라면
+            if infix[i] == ')':
 
-
-    if arr[4] == 1:
-        pass
-
-    if arr[4] == 2:
-        pass
-
-
-
-
-    print(matrix)
-
-
-
-
-
-
+                while stack:
+                    temp = stack.pop()
+                    if temp =='(':
+                        break
+                    postfix += temp
+            # 다른 연산자라면
+            else:
+                while stack and isp[stack[-1]] >= icp[infix[i]]:
+                    postfix += stack.pop()
+                stack.append(infix[i])
     
+    while stack:
+        postfix += stack.pop()
+    
+    return postfix
+
+def get_result(postfix):
+    stack = []
+    for c in postfix:
+        if c not in '+':
+            stack.append(int(c))
+        else:
+            right = stack.pop()
+            left = stack.pop()
+
+            if c == '+':
+                result = left + right
+            
+            stack.append(result)
+    
+    return stack[0]
+
+
+import sys
+sys.stdin = open('input.txt', 'r')
+for tc in range(1,11):
+    n = int(input())
+    row = input()
+    postfix = get_postfix(row,n)
+
+    print(f'#{tc} {get_result(postfix)}')

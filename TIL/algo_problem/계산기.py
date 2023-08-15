@@ -26,7 +26,7 @@ def get_postfix(infix, n):
         else:
             # 닫는 괄호가 나오는 경우
             if infix[i] == ")":
-                # 여는 괄호가 나올때까지 pop 해서 결과 출력
+                # 여는 괄호가 나올때까지 pop 해서 결과 출력 => pop한 건 후위표기식으로 출력  
                 while stack:
                     temp = stack.pop()
                     if temp == "(":
@@ -34,13 +34,12 @@ def get_postfix(infix, n):
                     postfix += temp
             # 닫는 괄호가 아닌 다른 연산자가 나오는 경우
             else:
-                # stack[top]에 있는 연산자의 우선순위가
+                # 스택에는 비교적 우선순위가 높은 연산자 위주로 채워지게 됨.
+                # 토큰이 스택보다 우선순위가 높지 않으면, 계속 pop하여 출력
+                # 토큰이 스택보다 우선순위가 높으면, 계속 스택에 push함.
+                # 따라서, stack[top]에 있는 연산자의 우선순위가
                 # 현재 토큰(연산자)의 우선순위보다 같거나 높으면 (계속 비교)
                 # 계속 pop 해서 출력
-                # 현재 토큰 연산자와 stack[top]에 있는 연산자 우선순위 비교
-                # 비교했을 때 우선순위가 높은 연산자들은 먼저 계산해야하니 스택에서 pop함
-                # 비교했을 때 우선순위가 낮은 연산자들은 보다 늦게 계산해야하니 스택에 push함.
-
                 while stack and isp[stack[-1]] >= icp[infix[i]]:
                     postfix += stack.pop()
                 # 그게 아니면 push()
