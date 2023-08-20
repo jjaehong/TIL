@@ -1,66 +1,63 @@
-# BFS / 미로찾기
-# 인접행렬로 접근
+# 미로거리 bfs
+# 현재 위치 -> 다음 위치(델타)
 
-dr = [-1, 1, 0, 0]
-dc = [0, 0, -1, 1]
+dr = [0,1,0,-1]
+dc = [1,0,-1,0]
 
 
-# sr : 시작 행 번호
-# sc : 시작 열 번호
-def bfs(sr, sc):
-    # 중복 체크 배열
-    visited = [[0] * n for _ in range(n)] # 인접행렬
+def start():
+    for r in range(N):
+        for c in range(N):
+            if maze[r][c] == 2:
+                return r, c
+    
+def bfs(sr,sc):
+
+    # 기본설정
+    visited = [[0] * N for _ in range(N)]
     q = []
-    q.append((sr, sc))  # 시작 위치 정보 (sr,sc)를 큐에 삽입
+    q.append((sr,sc))
     visited[sr][sc] = 1
 
-    # 탈출하는데 걸린 거리(최소)
-    distance = 0
+    # q가 빌때까지 방문, 모두 방문
     while q:
-        # 원소를 꺼내기 전에 현재 단계에서 큐안에 방문할 원소의 개수를 확인
-        # 현재 단계에서 큐의 원소를 몇개까지만 확인하면 될지 직접 계산
-        
-        # 즉, bfs 같은 계층 단계를 기준으로 pop하고 append함
-        size = len(q)
-        for _ in range(size):
-            r, c = q.pop(0)  # 현재 방문하는 위치 r,c
 
-            # 현재 방문하는 위치가 도착점인 경우 반복 중단
-            if maze[r][c] == 99:
-                print(f"탈출 : {distance}")
-                break
+        for _ in range(len(q)):
+            r,c = q.pop(0) # 현재 위치 지정
+            if maze[r][c] == 3:
+                return visited[r][c]
+            
+            for i in range(N):
+                for j in range(N):
+                    if (i, j) == (r, c):
+                        print("*", end=" ")
+                    else:
+                        print(maze[i][j], end=" ")
+                print()
+            print("===================")
 
-            # 현재 위치 r,c에서 4방향 탐색
             for d in range(4):
-                nr = r + dr[d]
-                nc = c + dc[d]
-                # 다음 위치가 유효한 인덱스인지, 벽이아님, 방문한적도 없음
-                if 0 <= nr < n and 0 <= nc < n and maze[nr][nc] != 1 and not visited[nr][nc]:
-                    # nr, nc 방문 처리
-                    q.append((nr, nc))
-                    visited[nr][nc] = visited[r][c] + 1
-
-        distance += 1
-
-    return distance
+                for d2 in range(1, visited[r][c] + 1,2):
+                    nr = r + dr[d] * d2
+                    nc = c + dc[d] * d2
+                    if 0<= nr < N and 0<= nc < N and maze[nr][nc] != 1 and visited[nr][nc] ==0:
+                        q.append((nr,nc))
+                        visited[nr][nc] = visited[r][c] + 1
+    return 0
 
 
-n = 7
 
-maze = [[0, 0, 0, 0, 0, 0, 0],
-        [0, 1, 1, 1, 1, 1, 0],
-        [0, 1, 0, 1, 0, 1, 0],
-        [0, 0, 0, 1, 0, 0, 0],
-        [1, 0, 1, 1, 1, 0, 1],
-        [1, 0, 1, 99, 0, 0, 1],
-        [0, 0, 1, 1, 1, 0, 1]]
 
-maze = [[0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 1, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0]]
 
-print(bfs(3, 3)) # (3,3)에서 시작
+
+import sys
+sys.stdin = open('input.txt', 'r')
+
+T = int(input())
+for tc in range(1, T + 1):
+    N = int(input())
+    maze = [list(map(int, input())) for _ in range(N)]
+
+    sr,sc = start()
+
+    print(f'#{tc} {bfs(sr,sc)}')

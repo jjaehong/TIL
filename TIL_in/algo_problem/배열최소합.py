@@ -20,7 +20,7 @@ def backtracking(i, now_sum):
         if now_sum < min_v:
             min_v = now_sum
         return # 들여쓰기 위치 주의 : now_sum을 구해야하기에
-            # return : 여기에 reture은 최소값 하나 찾고 종료 
+            # return : 여기에 return은 최소값 하나 찾고 종료 
  
     # 재귀 호출
     # 0 ~ n-1 번째 열 중에서 이전에 고른적이 없는 j열 선택
