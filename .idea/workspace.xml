@@ -2,26 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc991e91-f963-4cd3-8c15-3b65740ab474" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TIL_in/algo_problem/연습문제1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TIL_in/algo_problem/이진수.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TIL_in/algo_problem/암호코드 스캔.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TIL_in/algo_problem/연습문제2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TIL_in/algo_problem/연습문제3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TIL_in/algo_problem/이진수2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/BFS.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/BFS.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/DFS.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/DFS.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/gcd_lcm_prime.py" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/gcd_lcm_prime.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/문자열.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/문자열.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/배열1_정렬.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/배열1_정렬.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/배열2_델타.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/배열2_델타.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/백트래킹.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/백트래킹.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/스택2_계산기.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/스택2_계산기.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/스택_dp.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/스택_dp.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/완전검색.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/완전검색.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/이진검색.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/이진검색.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/큐.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/큐.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/트리.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/트리.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/algo/패턴매칭.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_IM/패턴매칭.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TIL_in/algo_ad/start.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_ad/start.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TIL_in/algo_problem/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/algo_problem/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TIL_in/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TIL_in/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,28 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.updates" />
   </component>
-  <component name="RunManager" selected="Python.이진수">
-    <configuration name="배열최소합" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="TIL" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TIL_in/algo_problem" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TIL_in/algo_problem/배열최소합.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.이진수2">
     <configuration name="연습문제1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TIL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,6 +51,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TIL_in/algo_problem/연습문제1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="연습문제2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TIL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TIL_in/algo_problem" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TIL_in/algo_problem/연습문제2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="이진수2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="TIL" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TIL_in/algo_problem" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TIL_in/algo_problem/이진수2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.이진수" />
+        <item itemvalue="Python.이진수2" />
+        <item itemvalue="Python.연습문제2" />
+        <item itemvalue="Python.bfs1" />
         <item itemvalue="Python.연습문제1" />
         <item itemvalue="Python.subtree" />
-        <item itemvalue="Python.bfs1" />
-        <item itemvalue="Python.배열최소합" />
       </list>
     </recent_temporary>
   </component>
