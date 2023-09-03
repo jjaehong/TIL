@@ -1,6 +1,7 @@
 # 단순2진 암호코드
 
-# 주어진 암호를 7자리씩 끊어서 나타내기
+# 주어진 암호를 7자리씩 끊어서 리스트로 나타내기
+# 7자리가 
 # 끊어낸 암호 덩어리들에서 홀수번째와 짝수번째 구분하고 10진수로 표현
 # (홀수번째 끼리 합 * 3) + (짝수번째 끼리 합) = 10의 배수냐?
 # 올바른 암호코드라면 10진수형태 출력, 아니면 0 출력
@@ -27,17 +28,24 @@ for tc in range(1,T+1):
 
     
     
-    # 7자리씩 쪼개기
+    # 7자리씩 쪼개어 리스트에 넣기
+    lst = []
     for r in range(N):
         for c in range(0,len(password),7):
-            bit7 = password[r][c: c+7]
+            bit7 = password[r][c:c+7]
+            lst.append(bit7)
+    print(lst)
+
+    for i in range(len(lst)):
+        if lst[i] == dic.keys():
+            lst[i] = dic[i] 
+
+
+
+
+
             
-            if bit7 == dic[]
-
-
-
-            
-            print(dec)
+            # print(dec)
 
             # for i in range(7):
             #     if bit7[i] and
