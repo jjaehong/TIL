@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+        color :red;
+    }
+    /* 요소 */
+    h2{
+        color : orange;
+    }
+
+    /* h2안의 green클래스 */
+    h2.green {
+      color: black;
+    }
+
+    h3, h4 {
+        color: blue
+    }
+
+    /* h3안의 h2아이디 */
+    h3#h2 {
+		background-color: beige;
+		}
+
+    /* 클래스 */
+    .green {
+      color : green;
+    }
+    
+    /* 아이디 */
+    #purple {
+      color : purple
+    }
+
+    /* 자식 결합자 */
+    .green > span{
+      font-size: 50px;
+    }
+
+    /*자손 결합자*/
+    .green li{
+      color : brown
+    }
+
+</style>
+</head>
+
+<body>
+  <h1 class="green">Heading</h1> # 클래스는 특정을 지정하면서 style을 재사용할 수 잇음
+  <h2>선택자</h2>
+  <h2 class="green">요소안의 클래스</h2>
+  <h3>연습</h3>
+  <h3 id="h2">TITLE3</h3>
+  <h4>반가워요</h4>
+  <p id="purple">과목 목록</p>
+  <ul class="green">
+    <li>파이썬</li> # 포함관계
+    <li>알고리즘</li>
+    <li>웹
+      <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>PYTHON</li>
+      </ol>
+    </li>
+  </ul>
+  <p class="green">Lorem, <span>ipsum</span> dolor.</p>
+</body>
+
+</html>
