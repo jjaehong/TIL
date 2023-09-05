@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <style>
+        body {
+            border: 2px solid black;
+            width: 500px;
+            height: 250px;
+
+        }
+        
+        .nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+
+			/* align-items: center; */
+        }
+
+        .nav-menu {
+                position: relative;
+				flex-direction: column;
+			}
+        
+        .left {
+            text-align: center;
+
+        }
+
+        .right {
+            text-align: left;
+            float: top;
+        }
+
+        .right.bot {
+            top: 0;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            justify-content: center;
+			align-items: center;
+
+        }
+
+        .companyname {
+            margin-top: 0px;
+        }
+
+        .descript {
+            margin: 10px;
+            text-align: right;
+        }
+
+    </style>
+
+</head>
+<body>
+  <div>
+    <div class="nav">
+      <img src="../web실습/images/profile.jpg" alt="Profile Image">
+      <h2 class="companyname">Company Name</h2>
+    </div>
+    <div>
+      <div class="nav">
+        <div class="nav-menu">
+            <h3 class="left">한글 이름</h3>
+            <h4 class="left bot">English Name</h4>
+        </div>
+        <div class="nav-menu">
+            <p class="right">Phone Number</p>
+            <p class="right bot">Email</p>
+        </div>
+      </div>
+    </div>
+    <hr class="descript">
+    <div>
+      <p class="descript">description</p>
+    </div>
+  </div>
+</body>
+</html>
