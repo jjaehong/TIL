@@ -28,16 +28,32 @@
         
         .left {
             text-align: center;
+            margin: 0;
 
         }
 
         .right {
             text-align: left;
             float: top;
+            margin: 0;
+        }
+
+        .left.top{
+          margin-top: 20px;
+        }
+        .right.top {
+          margin-top: 20px;
         }
 
         .right.bot {
             top: 0;
+            margin: 0;
+            
+        }
+
+        .left.bot {
+            top: 0;
+            margin: 0;
         }
 
         img {
@@ -69,11 +85,11 @@
     <div>
       <div class="nav">
         <div class="nav-menu">
-            <h3 class="left">한글 이름</h3>
+            <h3 class="left top">한글 이름</h3>
             <h4 class="left bot">English Name</h4>
         </div>
         <div class="nav-menu">
-            <p class="right">Phone Number</p>
+            <p class="right top">Phone Number</p>
             <p class="right bot">Email</p>
         </div>
       </div>
