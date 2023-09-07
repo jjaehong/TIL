@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <style>
+        .sort {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            text-align: center;
+            height: 400px;
+        }
+
+        .bot {
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            text-align: center;
+            bottom: 0;
+            left: 50%;
+            right: 50%;
+            margin-bottom: 15px;
+            /* translate-middle-x : 부트스트랩에서 x축 점으로 이동*/
+        }
+    </style>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- 
+    width < 768px : 각 카드가 12칸 차지
+    768px <= width < 992px : 각 카드가 6칸 차지
+    992px <= width : 각 카드가 4칸 차지
+    -->
+
+
+
+    <!-- row-cols 행당 표시할 열 갯수 -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 m-1">
+        <div class="col">
+            <div class="card h-100">
+                <img src="../web/web실습/images/book.PNG" class="card-img-top" alt="...">
+                <div class="card-body sort">
+                    <h5 class="card-title">독서는 마음의 양식</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eum ipsum
+                        dolorum
+                        commodi, cumque corporis sint neque? Dicta iure distinctio expedita, facilis hic alias
+                        voluptates dolorem, maxime totam perferendis nisi.
+                    </p>
+                    <div class="bot">
+                        <button class="btn btn-primary" type="submit">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../web/web실습/images/book.PNG" class="card-img-top" alt="...">
+                <div class="card-body sort">
+                    <h5 class="card-title">noin and bada</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <div class="bot">
+                        <button class="btn btn-primary" type="submit">Buy</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../web/web실습/images/book.PNG" class="card-img-top" alt="...">
+                <div class="card-body sort">
+                    <h5 class="card-title">Cardy bee</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional content.</p>
+                    <div class="bot">
+                        <button class="btn btn-primary" type="submit">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../web/web실습/images/book.PNG" class="card-img-top" alt="...">
+                <div class="card-body sort">
+                    <h5 class="card-title">jonnastrong</h5>
+                    <p class="card-text">if you read this book, you will be jonnastrong</p>
+                    <div class="bot">
+                        <button class="btn btn-primary" type="submit">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
