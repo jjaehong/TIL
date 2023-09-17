@@ -1,17 +1,43 @@
+<!-- box-sizing -->
+<!-- 보통 전체(*) 선택자와 많이 사용함.  -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<style>
+		body {
+			width: auto;
+			height: auto;
+			border: 3px solid black;
+		}
+
+    /* 마진 상쇄 발생함! */
+		.box {
+			width: 100px;
+			border: 2px solid black;
+			padding: 10px;
+			margin: 20px;
+			background-color: yellow;
+		}
+
+		.content-box {
+			box-sizing: content-box;
+		}
+
+		.border-box {
+			box-sizing: border-box;
+		}
+	</style>
 </head>
+
 <body>
-  <div class="mx-md-2">
-  <span>div</span>
-</div>
+	<div class="box">box</div>
+	<div class="box content-box">content-box</div>
+	<div class="box border-box">border-box</div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 </html>
