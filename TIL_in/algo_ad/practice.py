@@ -1,59 +1,63 @@
-def partition(A, left, right):
-    # 1. 피봇 정하기(제일 왼쪽 부분)
-    p = A[left]
-
-    # 2. 피봇 기준 분리 : 피봇보다 작은거는 왼쪽부터 놓고, 큰거는 오른쪽부터 놓고
-    i, j = left, right
-    # i : 왼쪽에 있으면 안되는 원소의 위치를 찾는 인덱스
-    # 피봇보다 큰 원소의 위치 왼쪽 부터 찾기
-    # j : 오른쪽에 있으면 안되는 원소의 위치를 찾는 인덱스
-    # 피봇보다 작은 원소의 위치를 오른쪽 부터 찾기
-
-    # 피봇보다 큰거를 왼쪽부터 찾기 시작
-    while i <= j:
-        # i번째 위치에 있는 원소가 피봇보다 작으면 오른쪽으로 한칸 가서 찾기 계속
-        while i <= j and A[i] <= p:
-            i += 1
-
-        while i <= j and A[j] >= p:
-            j -= 1
-
-        if i < j:
-            A[i], A[j] = A[j], A[i]
-
-    A[left], A[j] = A[j], A[left]
-
-    return j
+# 연습문제 3
 
 
-# A : 정렬할 대상 리스트
-# left : 왼쪽 인덱스
-# r : 오른쪽 인덱스
+# 0. 이진 트리 저장
 
+    # 1차원 배열 저장
 
-def quick_sort(A, left, right):
-    if left < right:
-        pivot = partition(A, left, right)
-        quick_sort(A, left, pivot - 1)
-        quick_sort(A, pivot + 1, right)
+# 1. "연결" 리스트로 저장 : 개발용
+class Treenode:
+    def __init__(self,value):
+        self.value = value
+        self.left = None
+        self.right = None
 
+    # 삽입 함수
+    def insert(self,childnode):
+        
+        # 왼쪽 자식이 없을 경우
+        if not self.left:
+            self.left = childnode
+            return
+        
+        # 오른쪽 자식이 없을 경우
+        if not self.right:
+            self.right = childnode
+            return
 
-T = int(input())
-for tc in range(1, T + 1):
-    N = int(input())
-    arr = list(map(int, input().split()))
+        return
     
-    quick_sort(arr, 0, N - 1)
-    answer = arr[(N // 2)]
+    # 순회
+    def preorder(self):
 
-    print(f"#{tc} {answer}")
+        # 아무것도 없는 트리를 조회할 때
+        if self != None:
+            print(self.value, end=' ')
+
+            # 왼쪽 자식이 있다면 왼쪽 자식 조회
+            if self.left:
+                self.left.preorder()
+            
+            # 오른쪽 자식이 있다면 오른쪽 자식 조회
+            if self.right:
+                self.right.preorder()
 
 
-"""
-2
-5
-2 2 1 1 3
-10
-7 5 4 1 2 10 3 6 9 8
 
-"""
+# 짝수번째 idx -> 홀수번째 idx 연결
+arr = [1,2,1,3,2,4,3,5,3,6]
+
+# 이진트리 만들기        
+nodes = [Treenode(i) for i in range(0,14)]
+for i in range(0,len(arr),2):
+    parentnode = arr[i]
+    childnode = arr[i+1]
+    nodes[parentnode].insert(nodes[childnode])
+
+nodes[1].preorder
+
+
+
+# 2. 인접 리스트로 저장
+
+
