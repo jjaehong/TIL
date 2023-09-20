@@ -28,18 +28,21 @@ for tc in range(1,T+1):
     N,M = map(int,input().split()) # 사람 수 : n명 / 신청서 수: m개
     arr = list(map(int, input().split()))
 
-    p = [0] * (N+1)
 
     # 전체 몇개의 조? == 총 대표가 몇명??
     cnt = 0
 
     # 집합 초기화
+    p = [0] * (N+1)
     for i in range(1,N+1):
         p[i] = i
     
     # 집합 통일
     for i in range(M):
         union(arr[2*i],arr[2*i+1])
+        
+
+
 
 
 
