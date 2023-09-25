@@ -40,26 +40,13 @@ for tc in range(1,T+1):
     # 집합 통일
     for i in range(M):
         union(arr[2*i],arr[2*i+1])
-        
 
+    # 모두 root(대표) 찾아주기
+    for i in range(1,N+1):
+        p[i] = find_set(i)
 
-
-
-
-
-    print(p)
-    answer = list(set(p))
-    print(answer)
-
-
+    print(f'#{tc} {len(set(p))-1}')
     
-
-    # print(f'#{tc} {cnt}')
-
-        
-
-    
-
 
 
 '''
