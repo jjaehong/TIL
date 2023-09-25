@@ -11,7 +11,7 @@ class Treenode:
         self.value = value
         self.left = None
         self.right = None
-
+        
     # 삽입 함수
     def insert(self,childnode):
         
