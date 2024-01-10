@@ -45,7 +45,6 @@ if user == '보':
         print("비겼다.")
 
 
----
 
 user = input("뭐 낼거야? : ")
 print("내가", user)
